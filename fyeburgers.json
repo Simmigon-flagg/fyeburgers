@@ -1,0 +1,160 @@
+{
+    "employees": [
+        {
+            "employeeId": "EMP001",
+            "name": "John Doe",
+            "position": "Manager",
+            "level": 3,
+            "role": "Oversees overall operations",
+            "contact": "555-1234",
+            "password": "manager123",
+            "access": "full"
+        },
+        {
+            "employeeId": "EMP002",
+            "name": "Jane Smith",
+            "position": "Assistant Manager",
+            "level": 2,
+            "role": "Assists manager in daily tasks",
+            "contact": "555-5678",
+            "password": "assistant456",
+            "access": "limited"
+        },
+        {
+            "employeeId": "EMP003",
+            "name": "Mike Johnson",
+            "position": "Head Chef",
+            "level": 2,
+            "role": "Leads kitchen operations",
+            "contact": "555-9012",
+            "password": "chef789",
+            "access": "limited"
+        },
+        {
+            "employeeId": "EMP004",
+            "name": "Emily Brown",
+            "position": "Chef",
+            "level": 1,
+            "role": "Prepares food items",
+            "contact": "555-3456",
+            "password": "chef123",
+            "access": "basic"
+        },
+        {
+            "employeeId": "EMP005",
+            "name": "Alex Rodriguez",
+            "position": "Server",
+            "level": 1,
+            "role": "Serves food to customers",
+            "contact": "555-7890",
+            "password": "server456",
+            "access": "basic"
+        },
+        {
+            "employeeId": "ADMIN001",
+            "name": "Admin User",
+            "position": "Administrator",
+            "level": 4,
+            "role": "Manages system administration",
+            "contact": "555-0000",
+            "password": "admin123",
+            "access": "admin"
+        }
+    ],
+    "sales": [
+        {
+            "orderId": "ORDER001",
+            "timeOfSale": "2024-03-27T12:30:00",
+            "items": [
+                {
+                    "itemId": "ITEM001",
+                    "name": "Hamburger",
+                    "quantity": 2
+                },
+                {
+                    "itemId": "ITEM002",
+                    "name": "French Fries",
+                    "quantity": 1
+                },
+                {
+                    "itemId": "ITEM005",
+                    "name": "Coke",
+                    "quantity": 3
+                }
+            ]
+        },
+        {
+            "orderId": "ORDER002",
+            "timeOfSale": "2024-03-27T13:45:00",
+            "items": [
+                {
+                    "itemId": "ITEM004",
+                    "name": "Cheese Pizza",
+                    "quantity": 1
+                },
+                {
+                    "itemId": "ITEM003",
+                    "name": "Caesar Salad",
+                    "quantity": 2
+                },
+                {
+                    "itemId": "ITEM005",
+                    "name": "Coke",
+                    "quantity": 1
+                }
+            ]
+        }
+    ],
+    "inventories": [
+        {
+            "itemId": "ITEM001",
+            "name": "Hamburger",
+            "category": "Main Course",
+            "price": 5.99,
+            "quantity": 50,
+            "image": "https://example.com/hamburger.jpg"
+        },
+        {
+            "itemId": "ITEM002",
+            "name": "French Fries",
+            "category": "Side Dish",
+            "price": 2.49,
+            "quantity": 100,
+            "image": "https://example.com/french_fries.jpg"
+        },
+        {
+            "itemId": "ITEM003",
+            "name": "Caesar Salad",
+            "category": "Salad",
+            "price": 4.99,
+            "quantity": 30,
+            "image": "https://example.com/caesar_salad.jpg"
+        },
+        {
+            "itemId": "ITEM004",
+            "name": "Cheese Pizza",
+            "category": "Main Course",
+            "price": 7.99,
+            "quantity": 40,
+            "image": "https://example.com/cheese_pizza.jpg"
+        },
+        {
+            "itemId": "ITEM005",
+            "name": "Coke",
+            "category": "Beverage",
+            "price": 1.49,
+            "quantity": 80,
+            "image": "https://example.com/coke.jpg"
+        }
+    ] ,
+    "stores":[{
+        "id": 34234,
+        "location": "123 Fake Street",
+        "branch": 0,
+        "managers": "Bry Burger",
+        "employees": [],
+        "sales": [],
+        "inventories": []
+
+    }]   
+}
