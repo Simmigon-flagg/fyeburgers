@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 
 const BASEURL = 'http://localhost:4000'
 const fetchEmployees = async () => {
+   
     try {
         const response = await fetch(`${BASEURL}/employees`);
         const json = await response.json();
@@ -27,6 +28,7 @@ export const EmployeesContextProvider = ({ children }) => {
     }, [employees]);
 
     const createEmployee = async (newEmployee) => {
+      
         try {
             const addEmployee = {
                 id: nanoid(), // Generate unique ID using nanoid
@@ -52,6 +54,7 @@ export const EmployeesContextProvider = ({ children }) => {
     };
 
     const updateEmployee = async (id, editEmployee) => {
+      
         try {
             const res = await fetch(`${BASEURL}/employees/${id}`, {
                 method: 'PUT',
@@ -92,7 +95,7 @@ export const EmployeesContextProvider = ({ children }) => {
         }
     };
 
-    const contextValue = { employees,  setEmployees, createEmployee, updateEmployee, deleteEmployee };
+    const contextValue = { employees, setEmployees, createEmployee, updateEmployee, deleteEmployee };
     return (<EmployeesContext.Provider value={contextValue}>
         {children}
     </EmployeesContext.Provider>)

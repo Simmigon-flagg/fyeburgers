@@ -3,7 +3,7 @@ import "./Managers.css"
 
 import Manager from '../Manager/Manager';
 import ManagerModal from '../Modal/ManagerModal';
-import {ManagersContext} from '../../context/ManagersContext';
+import { ManagersContext } from '../../context/ManagersContext';
 const Managers = () => {
   const { managers, createManager, updateManager, deleteManager } = useContext(ManagersContext);
   return (
@@ -12,7 +12,7 @@ const Managers = () => {
       <div style={{ display: "flex", flexDirection: "column" }}>
 
         {managers.map((manager) => (
-         <Manager key={manager.id} manager={manager} updateManager={updateManager} deleteManager={deleteManager} />
+          <Manager key={manager.id} manager={manager} updateManager={updateManager} deleteManager={deleteManager} />
         ))}
       </div>
     </div>

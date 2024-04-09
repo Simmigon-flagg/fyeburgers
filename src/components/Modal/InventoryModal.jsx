@@ -3,7 +3,7 @@ import "./Modal.css";
 
 export default function InventoryModal({ content, header, inventory, createInventory, updateInventory, deleteInventory }) {
     const [modal, setModal] = useState(false);
-    const [newInventory, setNewInventory] = useState(inventory);
+    const [newInventory, setNewInventory] = useState('');
 
     const toggleModal = () => {
         setModal(!modal);
@@ -47,6 +47,19 @@ export default function InventoryModal({ content, header, inventory, createInven
                     <div onClick={toggleModal} className="overlay"></div>
                     <div className="modal-content">
                         <form onSubmit={handleCreate}>
+                            <p>Name</p>
+                            <input type="text" onChange={handleChange} name="name" value={newInventory.name} /><hr />
+                            <p>Category</p>
+                            <input type="text" onChange={handleChange} name="category" value={newInventory.category} /><hr />
+                            <p>Price</p>
+
+                            <input type="text" onChange={handleChange} name="price" value={newInventory.price} /><hr />
+                            <p>Quantity</p>
+
+                            <input type="text" onChange={handleChange} name="quantity" value={newInventory.quantity} /><hr />
+
+                            <p>image</p>
+                            <input type="text" onChange={handleChange} name="image" value={newInventory.image} /><hr />
 
 
                             <button type="submit">Submit</button>
@@ -78,25 +91,20 @@ export default function InventoryModal({ content, header, inventory, createInven
                     <div className="modal-content">
                         <form onSubmit={handleEditSubmit}>
                             <p>{inventory.name}</p>
-                            <input type="text" onChange={handleChange} name="name" defaultValue={newInventory.name} /><hr />
+                            <input type="text" onChange={handleChange} name="name" defaultValue={inventory.name} /><hr />
                             <p>{inventory.category}</p>
-                            <input type="text" onChange={handleChange} name="category" defaultValue={newInventory.category} /><hr />
+                            <input type="text" onChange={handleChange} name="category" defaultValue={inventory.category} /><hr />
                             <p>{inventory.price}</p>
-                            <input type="text" onChange={handleChange} name="price" defaultValue={newInventory.price} /><hr />
+                            <input type="text" onChange={handleChange} name="price" defaultValue={inventory.price} /><hr />
                             <p>{inventory.image}</p>
-                            <input type="text" onChange={handleChange} name="image" defaultValue={newInventory.image} /><hr />
+                            <input type="text" onChange={handleChange} name="image" defaultValue={inventory.image} /><hr />
 
                             <button type="submit">Submit</button>
                         </form>
 
-
                         <button className="close-modal" onClick={toggleModal}>
                             CLOSE
                         </button>
-                        <button className="" onClick={toggleModal}>
-                            Update
-                        </button>
-
 
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 
 const BASEURL = 'http://localhost:4000'
 const fetchManagers = async () => {
+
     try {
         const response = await fetch(`${BASEURL}/managers`);
         const json = await response.json();
@@ -27,6 +28,7 @@ export const ManagersContextProvider = ({ children }) => {
     }, [managers]);
 
     const createManager = async (newManager) => {
+
         try {
             const addManager = {
                 id: nanoid(), // Generate unique ID using nanoid
@@ -52,6 +54,7 @@ export const ManagersContextProvider = ({ children }) => {
     };
 
     const updateManager = async (id, editManager) => {
+
         try {
             const res = await fetch(`${BASEURL}/managers/${id}`, {
                 method: 'PUT',
@@ -92,7 +95,7 @@ export const ManagersContextProvider = ({ children }) => {
         }
     };
 
-    const contextValue = { managers,  setManagers, createManager, updateManager, deleteManager };
+    const contextValue = { managers, setManagers, createManager, updateManager, deleteManager };
     return (<ManagersContext.Provider value={contextValue}>
         {children}
     </ManagersContext.Provider>)

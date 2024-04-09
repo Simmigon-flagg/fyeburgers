@@ -8,13 +8,13 @@ const Inventory = ({ inventory, updateInventory, deleteInventory }) => {
 
 
   return (
-    
-      <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center" }}>
-        <p>{inventory.name}</p>
-        <InventoryModal content={"Inventory"} header={"Read"} inventory={inventory} />
-        <InventoryModal content={"Inventory"} header={"Update"} inventory={inventory} updateInventory={updateInventory} />
-        <InventoryModal content={"Inventory"} header={"Delete"} inventory={inventory} deleteInventory={deleteInventory} />
-      </div>
+
+    <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center" }}>
+      <p>{inventory.name}</p>
+      <InventoryModal content={"Inventory"} header={"Read"} inventory={inventory} />
+      <InventoryModal content={"Inventory"} header={"Update"} inventory={inventory} updateInventory={updateInventory} />
+      <InventoryModal content={"Inventory"} header={"Delete"} inventory={inventory} deleteInventory={deleteInventory} />
+    </div>
 
 
   )

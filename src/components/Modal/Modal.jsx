@@ -8,7 +8,7 @@ export default function Modal({ employee, content }) {
         setModal(!modal);
     };
 
-    if (modal) { 
+    if (modal) {
         document.body.classList.add('active-modal')
     } else {
         document.body.classList.remove('active-modal')
@@ -26,8 +26,6 @@ export default function Modal({ employee, content }) {
                     <div className="modal-content">
                         <h2>New Employee</h2>
                         <h2>Name: {employee.name}</h2>
-
-
                         <p>
                             {employee.position}
                         </p>
@@ -35,12 +33,12 @@ export default function Modal({ employee, content }) {
                             CLOSE
                         </button>
                         <button className="" onClick={toggleModal}>
-                            Updated 
+                            Updated
                         </button>
                         <button className="" onClick={toggleModal}>
-                            Deleted 
+                            Deleted
                         </button>
-                      
+
                     </div>
                 </div>
             )}

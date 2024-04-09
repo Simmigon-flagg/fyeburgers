@@ -25,12 +25,6 @@ export default function SaleModal({ content, header, sale, createSale, updateSal
         toggleModal();
     };
 
-    const handleEditSubmit = (e) => {
-        e.preventDefault();
-        updateSale(sale.id, newSale);
-        toggleModal()
-
-    };
 
     const handleDelete = (e) => {
         e.preventDefault();
@@ -84,35 +78,7 @@ export default function SaleModal({ content, header, sale, createSale, updateSal
                     </div>
                 </div>
             )}
-            {header === "Update" && modal && (
-                <div className="modal">
-                    <div onClick={toggleModal} className="overlay"></div>
-                    <div className="modal-content">
-                        <form onSubmit={handleEditSubmit}>
-                            <label htmlFor="name">Name:{sale?.name} </label><br />
-                            <input type="text" id="name" name="name" onChange={handleChange} /><br /><br />
 
-                            <label htmlFor="store_number">Store number:{sale?.store_number}</label><br />
-                            <input type="text" id="store_number" name="store_number" onChange={handleChange} /><br /><br />
-
-                            <label htmlFor="branch_location">Address:{sale?.branch_location}</label><br />
-                            <input type="text" id="branch_location" name="branch_location" onChange={handleChange} /><br /><br />
-
-                            <button type="submit">Submit</button>
-                        </form>
-
-
-                        <button className="close-modal" onClick={toggleModal}>
-                            CLOSE
-                        </button>
-                        <button className="" onClick={toggleModal}>
-                            Update
-                        </button>
-
-
-                    </div>
-                </div>
-            )}
             {header === "Delete" && modal && (
                 <div className="modal">
                     <div onClick={toggleModal} className="overlay"></div>

@@ -1,7 +1,11 @@
+.nav {
+  background-color: "white";
+}
+
 .mobile-navbar {
-  background-color: #333;
+
   padding: 10px;
-  color: #fff;
+  color: black;
 }
 
 .menu-toggle {
@@ -13,10 +17,9 @@
   padding: 0;
   margin: 0;
   display: flex;
-  
+
   flex-direction: column;
-  background-color: #444;
-  
+
 }
 
 .dropdown-menu li {
@@ -32,5 +35,5 @@
 }
 
 .dropdown-menu li:hover {
-  background-color: #555;
+  /* background-color: #555; */
 }

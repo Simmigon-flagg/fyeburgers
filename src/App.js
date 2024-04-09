@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import PointOfSale from "./pages/PointOfSale/PointOfSale";
@@ -13,11 +13,13 @@ import { ManagersContextProvider } from "./context/ManagersContext";
 import { EmployeesContextProvider } from "./context/EmployeesContext";
 import { InventoriesContextProvider } from "./context/InventoriesContext";
 import { SalesContextProvider } from "./context/SalesContext";
+import { Box, Container } from "@mui/material";
 
 function App() {
   return (
     <div className="App">
-
+    <Container maxWidth="sm">
+      <Box sx={{ my: 4 }}>
       <BrowserRouter>
         <StoresContextProvider>
           <ManagersContextProvider>
@@ -27,26 +29,11 @@ function App() {
                   <Navbar />
                   <Routes>
                     <Route path="/" element={<>
-                      <Link to="/stores">
-                        <Stores />
-                      </Link>
-                      <hr />
-                      <Link to="/managers">
-                        <Managers />
-                      </Link>
-                      <hr />
-                      <Link to="/employees">
-                        <Employees />
-                      </Link>
-                      <Link to="/inventories">
-                        <Inventories />
-                        <hr />
-                      </Link>
-                      <Link to="/sales">
-                        <Sales />
-                        <hr />
-                      </Link>
-                    </>} />
+                      <PointOfSale />
+                      <Sales />
+                    </>
+                    }
+                    />
 
                     <Route path="/stores" element={<Stores />} >
                       <Route path=":stores" element={<Stores />} />
@@ -79,6 +66,9 @@ function App() {
 
       </BrowserRouter>
 
+      </Box>
+    </Container>
+    
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 
 const BASEURL = 'http://localhost:4000'
 const fetchSales = async () => {
+
     try {
         const response = await fetch(`${BASEURL}/sales`);
         const json = await response.json();
@@ -27,6 +28,7 @@ export const SalesContextProvider = ({ children }) => {
     }, [sales]);
 
     const createSale = async (newSale) => {
+
         try {
             const addSale = {
                 id: nanoid(), // Generate unique ID using nanoid
@@ -52,6 +54,7 @@ export const SalesContextProvider = ({ children }) => {
     };
 
     const updateSale = async (id, editSale) => {
+
         try {
             const res = await fetch(`${BASEURL}/sales/${id}`, {
                 method: 'PUT',

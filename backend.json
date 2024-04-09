@@ -64,6 +64,10 @@
       "password": "admin123",
       "access": "admin",
       "id": "7c22"
+    },
+    {
+      "name": "Flagg",
+      "id": "rDdWpbAeyehGGG6E4ayfO"
     }
   ],
   "managers": [
@@ -172,6 +176,7 @@
     {
       "name": "Cheese Burger",
       "category": "Main Course",
+      "menu": "Lunch",
       "price": 5.99,
       "quantity": 50,
       "image": "https://example.com/hamburger.jpg",
@@ -180,14 +185,16 @@
     {
       "name": "French Fries",
       "category": "Side Dish",
+      "menu": "Breakfast",
       "price": 2.49,
       "quantity": 100,
       "image": "https://example.com/french_fries.jpg",
       "id": "e789"
     },
     {
-      "name": "Caesar Salad",
+      "name": "Chicken Caesar Salad",
       "category": "Salad",
+      "menu": "Lunch",
       "price": 4.99,
       "quantity": 30,
       "image": "https://example.com/caesar_salad.jpg",
@@ -196,13 +203,27 @@
     {
       "name": "Cheese Pizza",
       "category": "Main Course",
+      "menu": "Lunch",
       "price": 7.99,
       "quantity": 40,
       "image": "https://example.com/cheese_pizza.jpg",
       "id": "b8c9"
     },
     {
-      "id": "3Ia7TCBAzz9L4RcSY4dtz"
+      "id": "MyoAYMt-sQVUH5UNH3Rzq",
+      "name": "156",
+      "category": "Breakfast",
+      "price": "156",
+      "image": "156"
+    },
+    {
+      "id": "9RmZC1WGesbNF2Sb6K7NL",
+      "name": "Burger Steak",
+      "category": "Main Course",
+      "menu": "Dinner",
+      "price": "7.99",
+      "quantity": "200",
+      "image": "no image"
     }
   ],
   "stores": [
@@ -223,6 +244,12 @@
       "name": "Fine and Nice Place",
       "store_number": "ST001",
       "branch_location": "123 First Address, Atlanta GA, 30303"
+    },
+    {
+      "id": "QkkAOZRftEc7mGXdq0mXZ",
+      "name": "Last Store",
+      "store_number": "123654",
+      "branch_location": "234 someplace"
     }
   ]
 }

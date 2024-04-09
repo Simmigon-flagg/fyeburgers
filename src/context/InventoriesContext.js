@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 
 const BASEURL = 'http://localhost:4000'
 const fetchInventories = async () => {
+
     try {
         const response = await fetch(`${BASEURL}/inventories`);
         const json = await response.json();
@@ -27,6 +28,7 @@ export const InventoriesContextProvider = ({ children }) => {
     }, [inventories]);
 
     const createInventory = async (newInventory) => {
+
         try {
             const addInventory = {
                 id: nanoid(), // Generate unique ID using nanoid
@@ -52,6 +54,7 @@ export const InventoriesContextProvider = ({ children }) => {
     };
 
     const updateInventory = async (id, editInventory) => {
+
         try {
             const res = await fetch(`${BASEURL}/inventories/${id}`, {
                 method: 'PUT',
@@ -92,7 +95,7 @@ export const InventoriesContextProvider = ({ children }) => {
         }
     };
 
-    const contextValue = { inventories,  setInventories, createInventory, updateInventory, deleteInventory };
+    const contextValue = { inventories, setInventories, createInventory, updateInventory, deleteInventory };
     return (<InventoriesContext.Provider value={contextValue}>
         {children}
     </InventoriesContext.Provider>)

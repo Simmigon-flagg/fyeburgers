@@ -3,7 +3,7 @@ import "./Modal.css";
 
 export default function EmployeeModal({ content, header, employee, createEmployee, updateEmployee, deleteEmployee }) {
     const [modal, setModal] = useState(false);
-    const [newEmployee, setNewEmployee] = useState(employee);
+    const [newEmployee, setNewEmployee] = useState('');
 
 
     const toggleModal = () => {
@@ -43,19 +43,32 @@ export default function EmployeeModal({ content, header, employee, createEmploye
         <>
             <p onClick={toggleModal} className="btn-modal">
                 {header}
-                </p>
+            </p>
 
             {header === "Create" && modal && (
                 <div className="modal">
                     <div onClick={toggleModal} className="overlay">
+                    </div>
 
-                        <div className="modal-content">
-                            <form onSubmit={handleCreate}>
+                    <div className="modal-content">
+                        <form onSubmit={handleCreate}>
+                            <p>Name </p>
+                            <input type="text" onChange={handleChange} name="name" value={newEmployee.name} /><hr />
+                            <p>Position </p>
+                            <input type="text" onChange={handleChange} name="position" value={newEmployee.position} /><hr />
+                            <p>level </p>
+                            <input type="text" onChange={handleChange} name="level" value={newEmployee.level} /><hr />
+                            <p>role </p>
+                            <input type="text" onChange={handleChange} name="role" value={newEmployee.role} /><hr />
+                            <p>contact </p>
+                            <input type="text" onChange={handleChange} name="contact" value={newEmployee.contact} /><hr />
+                            <p>login </p>
+                            <input type="text" onChange={handleChange} name="password" value={newEmployee.password} /><hr />
+                            <p>access </p>
+                            <input type="text" onChange={handleChange} name="access" value={newEmployee.access} /><hr />
+                            <button type="submit">Submit</button>
+                        </form>
 
-                                <button type="submit">Submit</button>
-                            </form>
-
-                        </div>
                     </div>
                 </div>
             )}
@@ -94,20 +107,20 @@ export default function EmployeeModal({ content, header, employee, createEmploye
                     <div onClick={toggleModal} className="overlay"></div>
                     <div className="modal-content">
                         <form onSubmit={handleEditSubmit}>
-                        <p>Name  {employee.name}</p>
-                            <input type="text" onChange={handleChange} name="name" defaultValue={newEmployee.name} /><hr />
+                            <p>Name  {employee.name}</p>
+                            <input type="text" onChange={handleChange} name="name" defaultValue={employee.name} /><hr />
                             <p>Position {employee.position}</p>
-                            <input type="text" onChange={handleChange} name="position" defaultValue={newEmployee.position} /><hr />
+                            <input type="text" onChange={handleChange} name="position" defaultValue={employee.position} /><hr />
                             <p>level {employee.level}</p>
-                            <input type="text" onChange={handleChange} name="level" defaultValue={newEmployee.level} /><hr />
+                            <input type="text" onChange={handleChange} name="level" defaultValue={employee.level} /><hr />
                             <p>role {employee.role}</p>
-                            <input type="text" onChange={handleChange} name="role" defaultValue={newEmployee.role} /><hr />
+                            <input type="text" onChange={handleChange} name="role" defaultValue={employee.role} /><hr />
                             <p>contact {employee.contact}</p>
-                            <input type="text" onChange={handleChange} name="contact" defaultValue={newEmployee.contact} /><hr />
+                            <input type="text" onChange={handleChange} name="contact" defaultValue={employee.contact} /><hr />
                             <p>login {employee.password}</p>
-                            <input type="text" onChange={handleChange} name="password" defaultValue={newEmployee.password} /><hr />
+                            <input type="text" onChange={handleChange} name="password" defaultValue={employee.password} /><hr />
                             <p>access {employee.access}</p>
-                            <input type="text" onChange={handleChange} name="access" defaultValue={newEmployee.access} /><hr />
+                            <input type="text" onChange={handleChange} name="access" defaultValue={employee.access} /><hr />
                             <button type="submit">Submit</button>
                         </form>
                     </div>

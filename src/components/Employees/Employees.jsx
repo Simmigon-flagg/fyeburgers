@@ -8,10 +8,10 @@ const Employees = () => {
   return (
     <div>
       <EmployeeModal content={"Employee"} header={"Create"} createEmployee={createEmployee} />
-      <ul style={{ display: "flex", flexDirection: "column" }}>
-
+      <div style={{ display: "flex", flexDirection: "column" }}>
         {employees.map((employee) => (<Employee key={employee.id} employee={employee} updateEmployee={updateEmployee} deleteEmployee={deleteEmployee} />))}
-      </ul>
+
+      </div>
     </div>
   )
 }

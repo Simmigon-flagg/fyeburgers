@@ -1,15 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./Employees.css"
-// import NewEmployeeModal from '../../components/Modal/NewEmployeeModal';
 import EmployeesComponent from '../../components/Employees/Employees';
 const Employees = () => {
   return (
-    <>
+    <div>
       <div>
         Employee
       </div>
       <EmployeesComponent />
-    </>
+    </div>
   )
 }
 

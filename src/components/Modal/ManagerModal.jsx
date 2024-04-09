@@ -4,7 +4,7 @@ import "./Modal.css";
 export default function ManagerModal({ content, header, manager, createManager, updateManager, deleteManager }) {
     const [modal, setModal] = useState(false);
     const [newManager, setNewManager] = useState(manager);
-   
+
     const toggleModal = () => {
         setModal(!modal);
     };
@@ -37,7 +37,7 @@ export default function ManagerModal({ content, header, manager, createManager, 
         toggleModal()
     };
 
-  
+
 
     return (
         <>
@@ -102,7 +102,7 @@ export default function ManagerModal({ content, header, manager, createManager, 
                     <div className="modal-content">
 
                         <form onSubmit={handleEditSubmit}>
-                        <p>Name  {manager.name}</p>
+                            <p>Name  {manager.name}</p>
                             <input type="text" onChange={handleChange} name="name" defaultValue={newManager.name} /><hr />
                             <p>Position {manager.position}</p>
                             <input type="text" onChange={handleChange} name="position" defaultValue={newManager.position} /><hr />

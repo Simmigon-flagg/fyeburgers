@@ -8,11 +8,10 @@ const Sales = () => {
   return (
     <div>
       <SaleModal content={"Sale"} header={"Create"} createSale={createSale} />
-     
-      <ul style={{ display: "flex", flexDirection: "column" }}>
-
+      <div style={{ display: "flex", flexDirection: "column" }}>
         {sales.map((sale) => (<Sale key={sale.id} sale={sale} updateSale={updateSale} deleteSale={deleteSale} />))}
-      </ul>
+
+      </div>
     </div>
   )
 }

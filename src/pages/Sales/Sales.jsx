@@ -3,15 +3,14 @@ import "./Sales.css"
 import SaleComponent from "../../components/Sales/Sales"
 const Sales = () => {
   return (
-    <>
+    <div>
       <div>
         Sales
       </div>
       <div>
         <SaleComponent />
       </div>
-
-    </>
+    </div>
   )
 }
 

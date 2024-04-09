@@ -30,17 +30,13 @@ export default function StoreModal({ content, header, store, createStore, update
         toggleModal()
 
     };
+
     const handleDelete = (e) => {
         e.preventDefault();
         deleteStore(store.id);
         toggleModal()
     };
 
-    if (modal) {
-        document.body.classList.add('active-modal')
-    } else {
-        document.body.classList.remove('active-modal')
-    }
 
     return (
         <>

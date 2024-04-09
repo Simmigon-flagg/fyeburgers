@@ -8,10 +8,10 @@ const Stores = () => {
   return (
     <div>
       <StoreModal content={"Store"} header={"Create"} createStore={createStore} />
-      <ul style={{ display: "flex", flexDirection: "column" }}>
-
+      <div style={{ display: "flex", flexDirection: "column" }}>
         {stores.map((store) => (<Store key={store.id} store={store} updateStore={updateStore} deleteStore={deleteStore} />))}
-      </ul>
+      
+      </div>
     </div>
   )
 }
