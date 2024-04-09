@@ -16,9 +16,9 @@ export default function Modal({ employee, content }) {
 
     return (
         <>
-            <button onClick={toggleModal} className="btn-modal">
+            <p onClick={toggleModal} className="btn-modal">
                 Open
-            </button>
+            </p>
 
             {modal && (
                 <div className="modal">

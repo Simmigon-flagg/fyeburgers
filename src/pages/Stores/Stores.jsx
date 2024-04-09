@@ -1,11 +1,19 @@
 import React from 'react'
-import StoreComponent from '../../components/Stores/StoresList'
 import "./Stores.css"
+import StoreComponent from '../../components/Stores/Stores'
+import Modal from '../../components/Modal/StoreModal'
 const Stores = () => {
   return (
     <div>
-      <StoreComponent />
-     </div>
+      <div>
+        Stores
+      </div>
+
+      <div>
+        <StoreComponent />
+      </div>
+
+    </div>
   )
 }
 

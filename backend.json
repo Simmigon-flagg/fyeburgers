@@ -1,0 +1,228 @@
+{
+  "employees": [
+    {
+      "name": "John Doe",
+      "position": "Manager",
+      "level": "30",
+      "role": "Oversees overall operations",
+      "contact": "555-1234",
+      "password": "manager123",
+      "access": "full",
+      "id": "b915",
+      "": "30"
+    },
+    {
+      "name": "Jane Smith",
+      "position": "Assistant Manager",
+      "level": "23",
+      "role": "Assists manager in daily tasks",
+      "contact": "555-5678",
+      "password": "assistant456",
+      "access": "limited",
+      "id": "0767",
+      "": "2"
+    },
+    {
+      "name": "Mike Johnson",
+      "position": "Head Chef",
+      "level": 2,
+      "role": "Leads kitchen operations",
+      "contact": "555-9012",
+      "password": "chef789",
+      "access": "limited",
+      "id": "2dfe"
+    },
+    {
+      "employeeId": "EMP004",
+      "name": "Emily Brown",
+      "position": "Chef",
+      "level": 1,
+      "role": "Prepares food items",
+      "contact": "555-3456",
+      "password": "chef123",
+      "access": "basic",
+      "id": "9b72"
+    },
+    {
+      "employeeId": "EMP005",
+      "name": "Alex Rodriguez",
+      "position": "Server",
+      "level": 1,
+      "role": "Serves food to customers",
+      "contact": "555-7890",
+      "password": "server456",
+      "access": "basic",
+      "id": "4f86"
+    },
+    {
+      "employeeId": "ADMIN001",
+      "name": "Admin User",
+      "position": "Administrator",
+      "level": 4,
+      "role": "Manages system administration",
+      "contact": "555-0000",
+      "password": "admin123",
+      "access": "admin",
+      "id": "7c22"
+    }
+  ],
+  "managers": [
+    {
+      "name": "John Tim",
+      "id": "3967",
+      "position": "Owner",
+      "level": "120",
+      "role": "admin",
+      "contact": "444-4446",
+      "password": "123654",
+      "access": "Admin"
+    },
+    {
+      "name": "Jane Smith",
+      "position": "Fry Cook",
+      "level": "2",
+      "role": "Assists manager in daily tasks",
+      "contact": "555-4564",
+      "password": "assistant456",
+      "access": "limited",
+      "id": "b156"
+    },
+    {
+      "name": "Mike Johnson",
+      "position": "Head Chef",
+      "level": 2,
+      "role": "Leads kitchen operations",
+      "contact": "555-9012",
+      "password": "chef789",
+      "access": "limited",
+      "id": "f284"
+    },
+    {
+      "name": "Emily Browns",
+      "position": "Chef",
+      "level": "1",
+      "role": "Prepares food items",
+      "contact": "555-3456",
+      "password": "chef",
+      "access": "basic",
+      "id": "a19b"
+    },
+    {
+      "name": "Admin User",
+      "position": "Administrator",
+      "level": "4f",
+      "role": "dfdf",
+      "contact": "dsfsdf",
+      "password": "dssdf",
+      "access": "admin",
+      "id": "879f"
+    }
+  ],
+  "sales": [
+    {
+      "orderId": "ORDER001",
+      "timeOfSale": "2024-03-27T12:30:00",
+      "items": [
+        {
+          "id": "ITEM001",
+          "name": "Hamburger",
+          "quantity": 2
+        },
+        {
+          "id": "ITEM002",
+          "name": "French Fries",
+          "quantity": 1
+        },
+        {
+          "id": "ITEM005",
+          "name": "Coke",
+          "quantity": 3
+        }
+      ],
+      "id": "9af7"
+    },
+    {
+      "orderId": "ORDER002",
+      "timeOfSale": "2024-03-27T13:45:00",
+      "items": [
+        {
+          "id": "ITEM004",
+          "name": "Cheese Pizza",
+          "quantity": 1,
+          "price": 7.99,
+          "total": 7.99
+        },
+        {
+          "id": "ITEM003",
+          "name": "Caesar Salad",
+          "quantity": 2,
+          "price": 4.99,
+          "total": 7.89
+        },
+        {
+          "id": "ITEM005",
+          "name": "Coke",
+          "quantity": 1
+        }
+      ],
+      "id": "696e"
+    }
+  ],
+  "inventories": [
+    {
+      "name": "Cheese Burger",
+      "category": "Main Course",
+      "price": 5.99,
+      "quantity": 50,
+      "image": "https://example.com/hamburger.jpg",
+      "id": "de14"
+    },
+    {
+      "name": "French Fries",
+      "category": "Side Dish",
+      "price": 2.49,
+      "quantity": 100,
+      "image": "https://example.com/french_fries.jpg",
+      "id": "e789"
+    },
+    {
+      "name": "Caesar Salad",
+      "category": "Salad",
+      "price": 4.99,
+      "quantity": 30,
+      "image": "https://example.com/caesar_salad.jpg",
+      "id": "78d4"
+    },
+    {
+      "name": "Cheese Pizza",
+      "category": "Main Course",
+      "price": 7.99,
+      "quantity": 40,
+      "image": "https://example.com/cheese_pizza.jpg",
+      "id": "b8c9"
+    },
+    {
+      "id": "3Ia7TCBAzz9L4RcSY4dtz"
+    }
+  ],
+  "stores": [
+    {
+      "id": "1",
+      "branch_location": "123 Main St, Anytown, USA",
+      "name": "Anytown Supermarket",
+      "store_number": "ST123456"
+    },
+    {
+      "id": "2",
+      "branch_location": "456 Oak St, Another Town, USA",
+      "name": "Another Town Hardware",
+      "store_number": "ST456"
+    },
+    {
+      "id": "jx680agKDtRifHoCE0v6A",
+      "name": "Fine and Nice Place",
+      "store_number": "ST001",
+      "branch_location": "123 First Address, Atlanta GA, 30303"
+    }
+  ]
+}

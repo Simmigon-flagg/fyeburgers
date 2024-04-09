@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import "./Employees.css"
-import NewEmployeeModal from '../../components/Modal/NewEmployeeModal';
-import EmployeesList from '../../components/EmployeesList/EmployeesList';
+// import NewEmployeeModal from '../../components/Modal/NewEmployeeModal';
+import EmployeesComponent from '../../components/Employees/Employees';
 const Employees = () => {
-  const [addNew, setNewEmployee] = useState("");
   return (
     <>
-      <NewEmployeeModal />
-      <EmployeesList />
+      <div>
+        Employee
+      </div>
+      <EmployeesComponent />
     </>
   )
 }

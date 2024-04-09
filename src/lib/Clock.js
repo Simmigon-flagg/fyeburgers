@@ -13,5 +13,4 @@ const Clock = () => {
         <div>{currentTime}</div>
     )
 }
-
 export default Clock

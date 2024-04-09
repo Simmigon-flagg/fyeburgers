@@ -1,12 +1,15 @@
 import React from 'react'
 import "./Inventories.css"
-import InventoriesList from '../../components/InventoriesList/InventoryList'
-const Inventory = () => {
+import InventoryComponent from '../../components/Inventories/Inventories'
+const Inventories = () => {
   return (
     <div>
-      <InventoriesList />
+      <div>
+        Inventories
+      </div>
+      <InventoryComponent />
     </div>
   )
 }
 
-export default Inventory
+export default Inventories
