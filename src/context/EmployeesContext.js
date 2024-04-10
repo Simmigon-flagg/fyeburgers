@@ -25,7 +25,7 @@ export const EmployeesContextProvider = ({ children }) => {
         };
 
         fetchData();
-    }, [employees]);
+    }, []);
 
     const createEmployee = async (newEmployee) => {
       

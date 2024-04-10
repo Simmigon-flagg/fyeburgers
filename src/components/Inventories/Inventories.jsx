@@ -3,7 +3,7 @@ import "./Inventories.css"
 import { InventoriesContext } from '../../context/InventoriesContext';
 import Inventory from '../Inventory/Inventory';
 import InventoryModal from '../Modal/InventoryModal';
-const Menu = () => {
+const Inventories = () => {
   const { inventories, createInventory, updateInventory, deleteInventory } = useContext(InventoriesContext);
   return (
     <div>
@@ -15,4 +15,4 @@ const Menu = () => {
     </div>)
 }
 
-export default Menu
+export default Inventories

@@ -25,7 +25,7 @@ export const SalesContextProvider = ({ children }) => {
         };
 
         fetchData();
-    }, [sales]);
+    }, []);
 
     const createSale = async (newSale) => {
 

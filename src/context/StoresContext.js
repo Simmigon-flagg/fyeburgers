@@ -25,7 +25,7 @@ export const StoresContextProvider = ({ children }) => {
         };
 
         fetchData();
-    }, [stores]);
+    }, []);
 
     const createStore = async (newStore) => {
 

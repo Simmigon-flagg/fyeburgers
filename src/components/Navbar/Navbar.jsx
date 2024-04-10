@@ -3,7 +3,7 @@ import "./Navbar.css"
 import Clock from '../../lib/Clock';
 import { Link } from 'react-router-dom';
 
-const MobileNavbar = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,7 +11,7 @@ const MobileNavbar = () => {
   };
 
   return (
-    <nav className="mobile-navbar" style={{display:"flex", justifyContent: "", color: "white"}}>
+    <nav className="mobile-navbar" style={{display:"flex", justifyContent: "space-around", color: "white", backGround:"green" }}>
       <div className="menu-toggle" onClick={toggleMenu}>
         FyeBurgers
       </div>
@@ -22,25 +22,25 @@ const MobileNavbar = () => {
       {isOpen && (
         <ul onClick={toggleMenu} className="dropdown-menu">
 
-          <Link to="/"><li>Home</li></Link>
-          <Link to="/employees"><li>Employee</li></Link>
-          <Link to="/inventories"><li>Inventory</li></Link>
-          <Link to="/sales"><li>Sales</li></Link>
-          <Link to="/stores"><li>Stores</li></Link>
-          <Link to="/orders"><li>Orders</li></Link>
-          <Link to="/menu"><li>Menu</li></Link>
+          <Link to="/">Home</Link>
+          <Link to="/employees">Employee</Link>
+          <Link to="/inventories">Inventory</Link>
+          <Link to="/sales">Sales</Link>
+          <Link to="/stores">Stores</Link>
+          <Link to="/orders">Orders</Link>
+          <Link to="/menu">Menu</Link>
         </ul>
       )}
 
-      <Link to="/"><li>Home</li></Link>
-      <Link to="/employees"><li>Employee</li></Link>
-      <Link to="/inventories"><li>Inventory</li></Link>
-      <Link to="/sales"><li>Sales</li></Link>
-      <Link to="/stores"><li>Stores</li></Link>
-      <Link to="/orders"><li>Orders</li></Link>
-      <Link to="/menu"><li>Menu</li></Link>
+      <Link to="/">Home</Link>
+      <Link to="/employees">Employee</Link>
+      <Link to="/inventories">Inventory</Link>
+      <Link to="/sales">Sales</Link>
+      <Link to="/stores">Stores</Link>
+      <Link to="/orders">Orders</Link>
+      <Link to="/menu">Menu</Link>
     </nav>
   );
 };
 
-export default MobileNavbar;
+export default Navbar;

@@ -25,7 +25,7 @@ export const ManagersContextProvider = ({ children }) => {
         };
 
         fetchData();
-    }, [managers]);
+    }, []);
 
     const createManager = async (newManager) => {
 

@@ -14,62 +14,65 @@ import { EmployeesContextProvider } from "./context/EmployeesContext";
 import { InventoriesContextProvider } from "./context/InventoriesContext";
 import { SalesContextProvider } from "./context/SalesContext";
 import { Box, Container } from "@mui/material";
+import Menu from "./pages/Menu/Menu";
 
 function App() {
   return (
-    <div className="App">
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-      <BrowserRouter>
-        <StoresContextProvider>
-          <ManagersContextProvider>
-            <EmployeesContextProvider>
-              <InventoriesContextProvider>
-                <SalesContextProvider>
-                  <Navbar />
-                  <Routes>
-                    <Route path="/" element={<>
-                      <PointOfSale />
-                      <Sales />
-                    </>
-                    }
-                    />
 
-                    <Route path="/stores" element={<Stores />} >
-                      <Route path=":stores" element={<Stores />} />
-                    </Route>
+    <BrowserRouter>
+      <StoresContextProvider>
+        <ManagersContextProvider>
+          <EmployeesContextProvider>
+            <InventoriesContextProvider>
+              <SalesContextProvider>
+                <Navbar />
+                <Container maxWidth="sm">
+                  <Box sx={{ my: 4 }}>
+                    <Routes>
+                      <Route path="/" element={<>
+                        <PointOfSale />
+                        <Sales />
+                      </>
+                      }
+                      />
 
-                    <Route path="/managers" element={<Managers />} >
-                      <Route path=":managers" element={<Managers />} />
-                    </Route>
+                      <Route path="/menu" element={<Menu />} >
+                        <Route path=":menu" element={<Stores />} />
+                      </Route>
+                      <Route path="/stores" element={<Stores />} >
+                        <Route path=":stores" element={<Stores />} />
+                      </Route>
 
-                    <Route path="/sales" element={<Sales />} >
-                      <Route path=":sales" element={<Sales />} />
-                    </Route>
+                      <Route path="/managers" element={<Managers />} >
+                        <Route path=":managers" element={<Managers />} />
+                      </Route>
 
-                    <Route path="/inventories" element={<Inventories />} >
-                      {/* <Route path=":inventory" element={<Inventory />} /> */}
-                    </Route>
+                      <Route path="/sales" element={<Sales />} >
+                        <Route path=":sales" element={<Sales />} />
+                      </Route>
 
-                    <Route path="/employees" element={<Employees />} >
-                      {/* <Route path=":employeeId" element={<EmployeeDetails />} /> */}
-                    </Route>
-                    {/* <Route path="/login" element={<LoginSignUp />} /> */}
-                    <Route />
-                  </Routes>
-                </SalesContextProvider>
-              </InventoriesContextProvider>
-            </EmployeesContextProvider>
-          </ManagersContextProvider>
-        </StoresContextProvider>
-        {/* <Footer /> */}
+                      <Route path="/inventories" element={<Inventories />} >
+                        {/* <Route path=":inventory" element={<Inventory />} /> */}
+                      </Route>
 
-      </BrowserRouter>
+                      <Route path="/employees" element={<Employees />} >
+                        {/* <Route path=":employeeId" element={<EmployeeDetails />} /> */}
+                      </Route>
+                      {/* <Route path="/login" element={<LoginSignUp />} /> */}
+                      <Route />
+                    </Routes>
+                  </Box>
+                </Container>
+              </SalesContextProvider>
+            </InventoriesContextProvider>
+          </EmployeesContextProvider>
+        </ManagersContextProvider>
+      </StoresContextProvider>
+      {/* <Footer /> */}
 
-      </Box>
-    </Container>
-    
-    </div>
+    </BrowserRouter>
+
+
   );
 }
 

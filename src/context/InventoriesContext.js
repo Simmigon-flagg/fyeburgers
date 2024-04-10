@@ -25,8 +25,7 @@ export const InventoriesContextProvider = ({ children }) => {
         };
 
         fetchData();
-    }, [inventories]);
-
+    }, []);
     const createInventory = async (newInventory) => {
 
         try {
