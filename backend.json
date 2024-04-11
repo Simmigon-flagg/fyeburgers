@@ -210,11 +210,9 @@
       "id": "b8c9"
     },
     {
-      "id": "MyoAYMt-sQVUH5UNH3Rzq",
-      "name": "156",
-      "category": "Breakfast",
-      "price": "156",
-      "image": "156"
+      "price": "4.99",
+      "name": "Honey Biscuit",
+      "id": "MyoAYMt-sQVUH5UNH3Rzq"
     },
     {
       "id": "9RmZC1WGesbNF2Sb6K7NL",
@@ -224,6 +222,22 @@
       "price": "7.99",
       "quantity": "200",
       "image": "no image"
+    },
+    {
+      "id": "w-mN3fJg5FnyMxc0Qipe7",
+      "name": "Honey Biscuit",
+      "category": "Breakface",
+      "price": "111.00",
+      "quantity": "100",
+      "image": "No image"
+    },
+    {
+      "id": "XYkTuyNG7LdgVtfwFqh4r",
+      "name": "Tasty Burger",
+      "category": "Burger",
+      "price": "10.99",
+      "quantity": "100",
+      "image": "No Image"
     }
   ],
   "stores": [
@@ -250,6 +264,34 @@
       "name": "Last Store",
       "store_number": "123654",
       "branch_location": "234 someplace"
+    }
+  ],
+  "orders": [
+    {
+      "orderId": 1,
+      "timeOfSale": "2024-03-27T13:45:00",
+      "items": [
+        {
+          "id": "ITEM004",
+          "name": "Cheese Pizza",
+          "quantity": 1,
+          "price": 7.99,
+          "total": 7.99
+        },
+        {
+          "id": "ITEM003",
+          "name": "Caesar Salad",
+          "quantity": 2,
+          "price": 4.99,
+          "total": 7.89
+        },
+        {
+          "id": "ITEM005",
+          "name": "Coke",
+          "quantity": 1
+        }
+      ],
+      "id": "696e"
     }
   ]
 }

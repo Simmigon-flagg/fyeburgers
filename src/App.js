@@ -16,6 +16,7 @@ import { SalesContextProvider } from "./context/SalesContext";
 import { Box, Container } from "@mui/material";
 import Menu from "./pages/Menu/Menu";
 
+
 function App() {
   return (
 
@@ -26,12 +27,12 @@ function App() {
             <InventoriesContextProvider>
               <SalesContextProvider>
                 <Navbar />
-                <Container maxWidth="sm">
-                  <Box sx={{ my: 4 }}>
+                {/* <Container maxWidth="sm">
+                  <Box sx={{ my: 4 }}> */}
                     <Routes>
                       <Route path="/" element={<>
                         <PointOfSale />
-                        <Sales />
+                      
                       </>
                       }
                       />
@@ -61,8 +62,8 @@ function App() {
                       {/* <Route path="/login" element={<LoginSignUp />} /> */}
                       <Route />
                     </Routes>
-                  </Box>
-                </Container>
+                  {/* </Box>
+                </Container> */}
               </SalesContextProvider>
             </InventoriesContextProvider>
           </EmployeesContextProvider>

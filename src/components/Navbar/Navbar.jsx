@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import "./Navbar.css"
 import Clock from '../../lib/Clock';
+import "./Navbar.css"
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="mobile-navbar" style={{display:"flex", justifyContent: "space-around", color: "white", backGround:"green" }}>
+    <nav className="mobile-navbar" style={{display:"flex", justifyContent: "space-around", color: "white", backgroundColor:"green" , textDecorationLine: 'none'}}>
       <div className="menu-toggle" onClick={toggleMenu}>
         FyeBurgers
       </div>
@@ -20,7 +20,7 @@ const Navbar = () => {
 
       </div>
       {isOpen && (
-        <ul onClick={toggleMenu} className="dropdown-menu">
+        <ul  onClick={toggleMenu} className="dropdown-menu">
 
           <Link to="/">Home</Link>
           <Link to="/employees">Employee</Link>
@@ -32,13 +32,14 @@ const Navbar = () => {
         </ul>
       )}
 
-      <Link to="/">Home</Link>
-      <Link to="/employees">Employee</Link>
-      <Link to="/inventories">Inventory</Link>
-      <Link to="/sales">Sales</Link>
-      <Link to="/stores">Stores</Link>
-      <Link to="/orders">Orders</Link>
-      <Link to="/menu">Menu</Link>
+        
+      <Link style={{textDecoration: 'none'}} to="/">Home</Link>
+      <Link style={{textDecoration: 'none'}} to="/employees">Employee</Link>
+      <Link style={{textDecoration: 'none'}} to="/inventories">Inventory</Link>
+      <Link style={{textDecoration: 'none'}} to="/sales">Sales</Link>
+      <Link style={{textDecoration: 'none'}} to="/stores">Stores</Link>
+      <Link style={{textDecoration: 'none'}} to="/orders">Orders</Link>
+      <Link style={{textDecoration: 'none'}} to="/menu">Menu</Link>
     </nav>
   );
 };
