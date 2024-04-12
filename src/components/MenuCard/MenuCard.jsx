@@ -13,9 +13,11 @@ import { SalesContext } from "../../context/SalesContext";
 import Paper from '@mui/material/Paper';
 
 export default function MenuCard({ inventory }) {
+
     const [count, setCount] = React.useState(0)
     const { sales, createSale, updateSale, deleteSale } = useContext(SalesContext);
-    debugger
+    
+    
     const removeItem = () => {
         if (count > 0) {
             setCount(count => count - 1)
@@ -23,6 +25,7 @@ export default function MenuCard({ inventory }) {
     }
 
     const addItem = () => {
+       
         setCount(count => count + 1)
     }
 

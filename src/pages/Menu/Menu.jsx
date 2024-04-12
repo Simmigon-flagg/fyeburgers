@@ -10,7 +10,7 @@ const Menu = () => {
         <div style={{ display: "flex", justifyContent: "space-around" ,marginTop:100}}>
             {/* <div style={{ display: "flex", justifyContent: "space-around", gap: 80, display: "grid", gridTemplateColumns: "20% 20% 20%", gridTemplateRows: "33% 33% 33%" }}> */}
 
-            <Checkout />
+           
             <MenuItems />
             <Checkout />
         </div>

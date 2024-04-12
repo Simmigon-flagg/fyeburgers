@@ -1,15 +1,7 @@
 {
   "employees": [
     {
-      "name": "John Doe",
-      "position": "Manager",
-      "level": "30",
-      "role": "Oversees overall operations",
-      "contact": "555-1234",
-      "password": "manager123",
-      "access": "full",
-      "id": "b915",
-      "": "30"
+      "id": "b915"
     },
     {
       "name": "Jane Smith",
@@ -174,13 +166,22 @@
   ],
   "inventories": [
     {
-      "name": "Cheese Burger",
-      "category": "Main Course",
-      "menu": "Lunch",
-      "price": 5.99,
-      "quantity": 50,
-      "image": "https://example.com/hamburger.jpg",
-      "id": "de14"
+      "name": "French Fries",
+      "category": "Side Dish",
+      "menu": "Breakfast",
+      "price": 2.49,
+      "quantity": 100,
+      "image": "https://example.com/french_fries.jpg",
+      "id": "e389"
+    },
+    {
+      "name": "French Fries",
+      "category": "Side Dish",
+      "menu": "Breakfast",
+      "price": 2.49,
+      "quantity": 100,
+      "image": "https://example.com/french_fries.jpg",
+      "id": "e489"
     },
     {
       "name": "French Fries",
@@ -208,11 +209,6 @@
       "quantity": 40,
       "image": "https://example.com/cheese_pizza.jpg",
       "id": "b8c9"
-    },
-    {
-      "price": "4.99",
-      "name": "Honey Biscuit",
-      "id": "MyoAYMt-sQVUH5UNH3Rzq"
     },
     {
       "id": "9RmZC1WGesbNF2Sb6K7NL",

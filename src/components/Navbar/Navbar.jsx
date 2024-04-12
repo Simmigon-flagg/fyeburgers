@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="mobile-navbar" style={{display:"flex", justifyContent: "space-around", color: "white", backgroundColor:"green" , textDecorationLine: 'none'}}>
+    <nav className="mobile-navbar" >
       <div className="menu-toggle" onClick={toggleMenu}>
         FyeBurgers
       </div>

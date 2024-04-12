@@ -1,29 +1,32 @@
-import * as React from 'react';
-import Avatar from '@mui/joy/Avatar';
-import Chip from '@mui/joy/Chip';
-import Box from '@mui/joy/Box';
-import Button from '@mui/joy/Button';
-import ButtonGroup from '@mui/joy/ButtonGroup';
-import Card from '@mui/joy/Card';
-import CardContent from '@mui/joy/CardContent';
-import CardOverflow from '@mui/joy/CardOverflow';
-import CardActions from '@mui/joy/CardActions';
-import IconButton from '@mui/joy/IconButton';
-import Typography from '@mui/joy/Typography';
-import SvgIcon from '@mui/joy/SvgIcon';
-import { Paper } from '@mui/material';
-import { Textarea } from '@mui/joy';
+import * as React from "react";
+import Avatar from "@mui/joy/Avatar";
+import Chip from "@mui/joy/Chip";
+import Box from "@mui/joy/Box";
+import Button from "@mui/joy/Button";
+import ButtonGroup from "@mui/joy/ButtonGroup";
+import Card from "@mui/joy/Card";
+import CardContent from "@mui/joy/CardContent";
+import CardOverflow from "@mui/joy/CardOverflow";
+import CardActions from "@mui/joy/CardActions";
+import IconButton from "@mui/joy/IconButton";
+import Typography from "@mui/joy/Typography";
+import SvgIcon from "@mui/joy/SvgIcon";
+import { Paper } from "@mui/material";
+import { Textarea } from "@mui/joy";
 
 export default function Checkout() {
   return (
     <Card
       sx={{
         width: 320,
-        boxShadow: 'lg',
+        boxShadow: "lg",
       }}
     >
-      <CardContent  >
-        <Avatar src="/static/images/avatar/1.jpg" sx={{ '--Avatar-size': '4rem' }} />
+      <CardContent>
+        <Avatar
+          src="/static/images/avatar/1.jpg"
+          sx={{ "--Avatar-size": "4rem" }}
+        />
         <Chip
           size="sm"
           variant="soft"
@@ -31,8 +34,8 @@ export default function Checkout() {
           sx={{
             mt: -1,
             mb: 1,
-            border: '3px solid',
-            borderColor: 'background.surface',
+            border: "3px solid",
+            borderColor: "background.surface",
           }}
         >
           PRO
@@ -46,23 +49,29 @@ export default function Checkout() {
             placeholder="Try to submit with no text!"
             required
             minRows={12}
-
             sx={{ mb: 1 }}
           />
-          <Textarea name="Plain" placeholder="Type in heffffxxxxxxxxxfffffffffffffre…" variant="plain" />
-          <Button type="submit">Submit</Button>
+          <Textarea
+            name="Plain"
+            placeholder="Type in heffffxxxxxxxxxfffffffffffffre…"
+            variant="plain"
+          />
+          <div>
+            <Button type="submit">Hold</Button>
+            <Button type="submit">Pay</Button>
+          </div>
         </form>
         <Typography level="title-lg">Josephine Blanton</Typography>
-        <Typography level="body-sm" sx={{ maxWidth: '24ch' }}>
-          Hello, this is my bio and I am a PRO member of MUI. I am a developer and I
-          love to code.
+        <Typography level="body-sm" sx={{ maxWidth: "24ch" }}>
+          Hello, this is my bio and I am a PRO member of MUI. I am a developer
+          and I love to code.
         </Typography>
         <Box
           sx={{
-            display: 'flex',
+            display: "flex",
             gap: 2,
             mt: 2,
-            '& > button': { borderRadius: '2rem' },
+            "& > button": { borderRadius: "2rem" },
           }}
         >
           <IconButton size="sm" variant="plain" color="neutral">
@@ -132,14 +141,15 @@ export default function Checkout() {
         </Box>
       </CardContent>
       <Paper>
-
         <CardActions buttonFlex="1">
-          <ButtonGroup variant="outlined" sx={{ bgcolor: 'background.surface' }}>
+          <ButtonGroup
+            variant="outlined"
+            sx={{ bgcolor: "background.surface" }}
+          >
             <Button>Message</Button>
             <Button>Connect</Button>
           </ButtonGroup>
         </CardActions>
-
       </Paper>
     </Card>
   );
