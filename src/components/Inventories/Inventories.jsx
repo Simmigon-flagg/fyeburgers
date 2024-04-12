@@ -1,6 +1,8 @@
-import React, { useContext } from 'react'
+/* Inventories.js */
+
+import React, { useContext } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-import "./Inventories.css"
+import "./Inventories.css";
 import { InventoriesContext } from '../../context/InventoriesContext';
 import Inventory from '../Inventory/Inventory';
 import InventoryModal from '../Modal/InventoryModal';
@@ -17,42 +19,26 @@ const Inventories = () => {
       width: 200,
       renderCell: (params) => (
         <div>
-          <button onClick={() => inventories(params.row.id)}>Read</button>
-          <button onClick={() => updateInventory(params.row.id)}>Update</button>
-          <button onClick={() => deleteInventory(params.row.id)}>Delete</button>
+          <button className="btn-action" onClick={() => updateInventory(params.row.id)}>Update</button>
+          <button className="btn-action" onClick={() => deleteInventory(params.row.id)}>Delete</button>
         </div>
       ),
     },
   ];
   return (
-    <div style={{ height: 'calc(100vh - 100px)', width: '100%' }}>
-    <DataGrid
-      rows={inventories}
-      columns={columns}
-      pageSize={5}
-      rowsPerPageOptions={[5, 10, 20]}
-      checkboxSelection
-      disableSelectionOnClick
-    />
-  </div>
-    // <div>
-    //   {/* <InventoryModal content={"Inventory"} header={"Create"} createInventory={createInventory} /> */}
-    //   <div style={{ height: 600, width: '100%' }}>
-    //   <DataGrid
-    //     rows={inventories}
-    //     columns={columns}
-    //     pageSize={5}
-    //     rowsPerPageOptions={[5, 10, 20]}
-    //     checkboxSelection
-    //     disableSelectionOnClick
-    //   />
-    // </div>
-    //   <div style={{ display: "flex", flexDirection: "column" }}>
-    //     {/* {inventories.map((inventory) => (<Inventory key={inventory.id} inventory={inventory} updateInventory={updateInventory} deleteInventory={deleteInventory} />))} */}
-
-    //   </div>
-    // </div>
-    );
+    <div className="container">
+      <div className="gridContainer">
+        <DataGrid
+          rows={inventories}
+          columns={columns}
+          pageSize={5}
+          rowsPerPageOptions={[5, 10, 20]}
+          checkboxSelection
+          disableSelectionOnClick
+        />
+      </div>
+    </div>
+  );
 }
 
-export default Inventories
+export default Inventories;

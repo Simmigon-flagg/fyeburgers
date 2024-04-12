@@ -146,8 +146,8 @@ export default function Checkout() {
             variant="outlined"
             sx={{ bgcolor: "background.surface" }}
           >
-            <Button>Message</Button>
-            <Button>Connect</Button>
+            <Button>Hold</Button>
+            <Button>Pay</Button>
           </ButtonGroup>
         </CardActions>
       </Paper>

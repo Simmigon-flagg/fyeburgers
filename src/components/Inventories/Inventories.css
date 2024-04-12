@@ -1,0 +1,23 @@
+/* Inventories.css */
+
+.container {
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gridContainer {
+    width: 90%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  /* Target header cells within the DataGrid */
+  .MuiDataGrid-root .MuiDataGrid-colCell, /* Target column headers */
+  .MuiDataGrid-root .MuiDataGrid-colCellTitle /* Target column header text */ {
+    background-color: #f6d1c1 !important; /* Set the background color */
+    color: #000000 !important; /* Set the text color */
+    font-weight: bold; /* Optionally, make the text bold */
+  }
+  

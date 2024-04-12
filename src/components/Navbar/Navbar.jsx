@@ -32,14 +32,22 @@ const Navbar = () => {
         </ul>
       )}
 
-        
-      <Link style={{textDecoration: 'none'}} to="/">Home</Link>
+<ul className="menu-list">
+        <li><Link style={{ textDecoration: 'none' }} to="/" className="menu-link">Home</Link></li>
+        <li><Link style={{ textDecoration: 'none' }} to="/employees" className="menu-link">Employee</Link></li>
+        <li><Link style={{ textDecoration: 'none' }} to="/inventories" className="menu-link">Inventory</Link></li>
+        <li><Link style={{ textDecoration: 'none' }} to="/sales" className="menu-link">Sales</Link></li>
+        <li><Link style={{ textDecoration: 'none' }} to="/stores" className="menu-link">Stores</Link></li>
+        <li><Link style={{ textDecoration: 'none' }} to="/orders" className="menu-link">Orders</Link></li>
+        <li><Link style={{ textDecoration: 'none' }} to="/menu" className="menu-link">Menu</Link></li>
+      </ul>
+      {/* <Link style={{textDecoration: 'none'}} to="/">Home</Link>
       <Link style={{textDecoration: 'none'}} to="/employees">Employee</Link>
       <Link style={{textDecoration: 'none'}} to="/inventories">Inventory</Link>
       <Link style={{textDecoration: 'none'}} to="/sales">Sales</Link>
       <Link style={{textDecoration: 'none'}} to="/stores">Stores</Link>
       <Link style={{textDecoration: 'none'}} to="/orders">Orders</Link>
-      <Link style={{textDecoration: 'none'}} to="/menu">Menu</Link>
+      <Link style={{textDecoration: 'none'}} to="/menu">Menu</Link> */}
     </nav>
   );
 };
