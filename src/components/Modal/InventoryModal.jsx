@@ -43,7 +43,7 @@ export default function InventoryModal({ content, header, inventory, createInven
                 {header}
             </p>
 
-            {header === "Create" && modal && (
+            {header === "Add New +" && modal && (
                 <div className="modal">
                     <div onClick={toggleModal} className="overlay"></div>
                     <div className="modal-content">

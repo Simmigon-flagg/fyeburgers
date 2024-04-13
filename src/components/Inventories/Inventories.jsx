@@ -1,21 +1,27 @@
 /* Inventories.js */
 
-import React, { useContext, useState } from 'react';
-import { DataGrid } from '@mui/x-data-grid';
+import React, { useContext, useState } from "react";
+import { DataGrid } from "@mui/x-data-grid";
 import "./Inventories.css";
-import { InventoriesContext } from '../../context/InventoriesContext';
-import Inventory from '../Inventory/Inventory';
-import InventoryModal from '../Modal/InventoryModal';
+import { InventoriesContext } from "../../context/InventoriesContext";
+import Inventory from "../Inventory/Inventory";
+import InventoryModal from "../Modal/InventoryModal";
 
 const Inventories = () => {
-  const { inventories, createInventory, updateInventory, deleteInventory } = useContext(InventoriesContext);
-  const [newInventory, setNewInventory] = useState('');
+  const {
+    inventories,
+    createInventory,
+    updateInventory,
+    deleteInventory,
+    toggleModal,
+  } = useContext(InventoriesContext);
+  const [newInventory, setNewInventory] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setNewInventory(prevStore => ({
+    setNewInventory((prevStore) => ({
       ...prevStore,
-      [name]: value
+      [name]: value,
     }));
   };
   const handleEditSubmit = (id, newInventory) => {
@@ -23,38 +29,53 @@ const Inventories = () => {
     console.log(newInventory);
     updateInventory(id, newInventory);
     // toggleModal()
-
   };
+
+  const handleClickAddNewInventoryItem = () => {};
+
   const columns = [
     // { field: 'id', headerName: 'ID', width: 100 },
-    { field: 'name', headerName: 'Name', width: 200, editable: true },
-    { field: 'price', headerName: 'price', width: 100, editable: true },
-    { field: 'category', headerName: 'Category', width: 150, editable: true },
-    { field: 'quantity', headerName: 'Quantity', width: 150, editable: true },
+    { field: "name", headerName: "Name", width: 200, editable: true },
+    { field: "price", headerName: "price", width: 100, editable: true },
+    { field: "category", headerName: "Category", width: 150, editable: true },
+    { field: "quantity", headerName: "Quantity", width: 150, editable: true },
     {
-      field: 'actions',
-      headerName: 'Actions',
+      field: "actions",
+      headerName: "Actions",
       width: 200,
-
 
       renderCell: (params) => (
         <div>
-          <button className="btn-action" onClick={() => handleEditSubmit(params.row.id, params.row)}>Change</button>
-          <button className="btn-action" onClick={() => deleteInventory(params.row.id)}>Delete</button>
+          <button
+            className="btn-action"
+            onClick={() => handleEditSubmit(params.row.id, params.row)}
+          >
+            Change
+          </button>
+          <button
+            className="btn-action"
+            onClick={() => deleteInventory(params.row.id)}
+          >
+            Delete
+          </button>
         </div>
       ),
     },
   ];
-  const handleEditCellChange = React.useCallback(
-    ({ id, field, props }) => {
-      // Update your data or perform any other action based on the cell edit
-      console.log(`Row ID: ${id}, Field: ${field}, New Value: ${props.value}`);
-    },
-    []
-  );
+  const handleEditCellChange = React.useCallback(({ id, field, props }) => {
+    // Update your data or perform any other action based on the cell edit
+    console.log(`Row ID: ${id}, Field: ${field}, New Value: ${props.value}`);
+  }, []);
   return (
     <div className="container">
       <div className="gridContainer">
+        <button className="btn-add">
+          <InventoryModal
+            content={"Inventory"}
+            header={"Add New +"}
+            createInventory={createInventory}
+          />{" "}
+        </button>
         <DataGrid
           rows={inventories}
           columns={columns.map((column) => ({
@@ -71,6 +92,6 @@ const Inventories = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Inventories;

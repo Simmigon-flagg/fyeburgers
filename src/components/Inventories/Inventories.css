@@ -5,12 +5,27 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    /* background-color: blue; */
+    
   }
   
   .gridContainer {
     width: 90%;
     border: 1px solid #ddd;
     border-radius: 10px;
+    /* background-color: red; */
+  }
+
+  .btn-add{
+    position: relative; /* Ensure that the z-index works */
+    z-index: 9999;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    border: 2px solid #ff7b00; 
+    background-color: rgb(253, 244, 237);
+
   }
   
   /* Target header cells within the DataGrid */
