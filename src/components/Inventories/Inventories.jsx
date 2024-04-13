@@ -32,7 +32,7 @@ const Inventories = () => {
     // toggleModal()
   };
 
-  const handleClickAddNewInventoryItem = () => {};
+  
 
   const columns = [
     // { field: 'id', headerName: 'ID', width: 100 },
