@@ -6,6 +6,7 @@ import "./Inventories.css";
 import { InventoriesContext } from "../../context/InventoriesContext";
 import Inventory from "../Inventory/Inventory";
 import InventoryModal from "../Modal/InventoryModal";
+import CustomButton from "../CustomButton/CustomButton";
 
 const Inventories = () => {
   const {
@@ -68,14 +69,15 @@ const Inventories = () => {
   }, []);
   return (
     <div className="container">
+      {/* TODO: Move code to GridComponent.jsx */}
       <div className="gridContainer">
-        <button className="btn-add">
-          <InventoryModal
+        <CustomButton text={"Add New +"}>
+        <InventoryModal
             content={"Inventory"}
             header={"Add New +"}
             createInventory={createInventory}
           />{" "}
-        </button>
+        </CustomButton>
         <DataGrid
           rows={inventories}
           columns={columns.map((column) => ({
