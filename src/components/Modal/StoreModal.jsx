@@ -11,6 +11,7 @@ export default function StoreModal({ content, header, store, createStore, update
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+        console.log(name + " " + value);
         setNewStore(prevStore => ({
             ...prevStore,
             [name]: value
@@ -41,7 +42,7 @@ export default function StoreModal({ content, header, store, createStore, update
     return (
         <>
             <p onClick={toggleModal} className="btn-modal">
-                {header}
+                {store.name}
             </p>
 
             {header === "Create" && modal && (

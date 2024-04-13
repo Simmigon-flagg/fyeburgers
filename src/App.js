@@ -13,7 +13,6 @@ import { ManagersContextProvider } from "./context/ManagersContext";
 import { EmployeesContextProvider } from "./context/EmployeesContext";
 import { InventoriesContextProvider } from "./context/InventoriesContext";
 import { SalesContextProvider } from "./context/SalesContext";
-import { Box, Container } from "@mui/material";
 import Menu from "./pages/Menu/Menu";
 
 
@@ -30,15 +29,12 @@ function App() {
                 {/* <Container maxWidth="sm">
                   <Box sx={{ my: 4 }}> */}
                     <Routes>
-                      <Route path="/" element={<>
-                        <PointOfSale />
-                      
-                      </>
+                      <Route path="/" element={<PointOfSale />
                       }
                       />
 
                       <Route path="/menu" element={<Menu />} >
-                        <Route path=":menu" element={<Stores />} />
+                        <Route path=":menu" element={<Menu />} />
                       </Route>
                       <Route path="/stores" element={<Stores />} >
                         <Route path=":stores" element={<Stores />} />

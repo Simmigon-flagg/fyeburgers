@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Stores.css"
-import StoreComponent from '../../components/Stores/Stores'
+import StoresComponent from '../../components/Stores/Stores'
 
 const Stores = () => {
   return (
@@ -9,7 +9,7 @@ const Stores = () => {
         Stores
       </div>
       <div>
-        <StoreComponent />
+        <StoresComponent />
       </div>
     </div>
   )

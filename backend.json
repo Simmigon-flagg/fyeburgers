@@ -1,9 +1,6 @@
 {
   "employees": [
     {
-      "id": "b915"
-    },
-    {
       "name": "Jane Smith",
       "position": "Assistant Manager",
       "level": "23",
@@ -56,10 +53,6 @@
       "password": "admin123",
       "access": "admin",
       "id": "7c22"
-    },
-    {
-      "name": "Flagg",
-      "id": "rDdWpbAeyehGGG6E4ayfO"
     }
   ],
   "managers": [
@@ -202,30 +195,16 @@
       "id": "78d4"
     },
     {
-      "name": "Cheese Pizza",
-      "category": "Main Course",
-      "menu": "Lunch",
-      "price": 7.99,
-      "quantity": 40,
-      "image": "https://example.com/cheese_pizza.jpg",
-      "id": "b8c9"
-    },
-    {
-      "id": "9RmZC1WGesbNF2Sb6K7NL",
-      "name": "Burger Steak",
-      "category": "Main Course",
-      "menu": "Dinner",
-      "price": "7.99",
-      "quantity": "200",
-      "image": "no image"
+      "id": "b8c9",
+      "name": "5+65",
+      "quantity": "4984",
+      "price": "10.99",
+      "category": "Create New"
     },
     {
       "id": "w-mN3fJg5FnyMxc0Qipe7",
-      "name": "Honey Biscuit",
-      "category": "Breakface",
-      "price": "111.00",
-      "quantity": "100",
-      "image": "No image"
+      "name": "Simmigon",
+      "quantity": "1000"
     },
     {
       "id": "XYkTuyNG7LdgVtfwFqh4r",
@@ -260,6 +239,12 @@
       "name": "Last Store",
       "store_number": "123654",
       "branch_location": "234 someplace"
+    },
+    {
+      "id": "0dvyq4O3UXAfwICioVgFs",
+      "name": "fgdsfgjo",
+      "store_number": "dsfjdisjfo",
+      "branch_location": "dsfjiojdiosj"
     }
   ],
   "orders": [

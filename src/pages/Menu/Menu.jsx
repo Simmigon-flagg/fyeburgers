@@ -5,15 +5,16 @@ import Checkout from '../../components/Checkout/Checkout'
 
 const Menu = () => {
     return (
+        <>
+            <h1>Menu</h1>
+            <div style={{ display: "flex", justifyContent: "space-around", marginTop: 100 }}>
+                {/* <div style={{ display: "flex", justifyContent: "space-around", gap: 80, display: "grid", gridTemplateColumns: "20% 20% 20%", gridTemplateRows: "33% 33% 33%" }}> */}
 
 
-        <div style={{ display: "flex", justifyContent: "space-around" ,marginTop:100}}>
-            {/* <div style={{ display: "flex", justifyContent: "space-around", gap: 80, display: "grid", gridTemplateColumns: "20% 20% 20%", gridTemplateRows: "33% 33% 33%" }}> */}
-
-           
-            <MenuItems />
-            <Checkout />
-        </div>
+                <MenuItems />
+                <Checkout />
+            </div>
+        </>
 
 
 

@@ -16,8 +16,8 @@ export default function MenuCard({ inventory }) {
 
     const [count, setCount] = React.useState(0)
     const { sales, createSale, updateSale, deleteSale } = useContext(SalesContext);
-    
-    
+
+
     const removeItem = () => {
         if (count > 0) {
             setCount(count => count - 1)
@@ -25,7 +25,7 @@ export default function MenuCard({ inventory }) {
     }
 
     const addItem = () => {
-       
+
         setCount(count => count + 1)
     }
 
@@ -36,56 +36,56 @@ export default function MenuCard({ inventory }) {
 
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
-            e.preventDefault(); // Prevents the default behavior of pressing Enter in a contentEditable element
+            // e.preventDefault(); // Prevents the default behavior of pressing Enter in a contentEditable element
             inputAdd(e);
         }
     }
 
     return (
-<Paper elevation={0} >
-     
-        <Card >
-            <div >
+        <Paper elevation={10} >
 
-                <CardHeader subheader={inventory.name} title={inventory.price} />
-            </div>
-            <CardMedia
-                component="img"
-                height="100"
-                image={pizza}
-                alt={inventory.name}
-            />
+            <Card >
+                <div >
+
+                    <CardHeader subheader={inventory.name} title={inventory.price} />
+                </div>
+                <CardMedia
+                    component="img"
+                    height="100"
+                    image={pizza}
+                    alt={inventory.name}
+                />
 
 
-            <CardActions style={{ display: "flex", justifyContent: "center" }}>
-                <IconButton onClick={removeItem} aria-label="Remove Item">
-                    <RemoveIcon />
-                </IconButton>
+                <CardActions style={{ display: "flex", justifyContent: "space-around" }}>
+                    <IconButton onClick={removeItem} aria-label="Remove Item">
+                        <RemoveIcon />
+                    </IconButton>
 
-                <IconButton>
-                    <ListItemText
-                        contentEditable
-                        shrink
-                        onBlur={(e) => inputAdd(e)}
-                        onKeyDown={handleKeyPress} // Add this line
-                        primary={count}
-                    >{count}</ListItemText>
+                    <IconButton>
+                        <ListItemText
+                            contentEditable
+                            shrink
+                            onBlur={(e) => inputAdd(e)}
+                            onKeyDown={handleKeyPress} // Add this line
+                            primary={count}
+                        >{count}</ListItemText>
 
-                </IconButton>
-                <IconButton onClick={addItem} aria-label="Add Item">
-                    <AddIcon />
-                </IconButton>
-            </CardActions>
-            <CardActions style={{ display: "flex", justifyContent: "center" }}>
-                <IconButton onClick={removeItem} aria-label="add to favorites">
-                    Remove
-                </IconButton>
+                    </IconButton>
+                    <IconButton onClick={addItem} aria-label="Add Item">
+                        <AddIcon />
+                    </IconButton>
+                </CardActions>
+                <CardActions style={{ display: "flex", justifyContent: "space-between" }}>
+                    <IconButton onClick={() => setCount(0)} aria-label="add to favorites">
+                        Remove
+                    </IconButton>
 
-                <IconButton onClick={addItem}>
-                    Add
-                </IconButton>
-            </CardActions>
-        </Card>
+                    <IconButton onClick={addItem}>
+                        Add
+                    </IconButton>
+                </CardActions>
+            </Card>
         </Paper>
     );
 }

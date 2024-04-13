@@ -2,6 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import { nanoid } from 'nanoid';
 
 const BASEURL = 'http://localhost:4000'
+
 const fetchStores = async () => {
    
     try {
@@ -77,7 +78,6 @@ export const StoresContextProvider = ({ children }) => {
             console.error("Error updating store:", error);
         }
     };
-
 
     const deleteStore = async (id) => {
 

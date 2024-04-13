@@ -30,6 +30,7 @@ export default function InventoryModal({ content, header, inventory, createInven
         toggleModal()
 
     };
+    
     const handleDelete = (e) => {
         e.preventDefault();
         deleteInventory(inventory.id);
