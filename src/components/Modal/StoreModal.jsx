@@ -42,7 +42,7 @@ export default function StoreModal({ content, header, store, createStore, update
     return (
         <>
             <p onClick={toggleModal} className="btn-modal">
-                {store.name}
+                {store?.name}
             </p>
 
             {header === "Create" && modal && (

@@ -13,7 +13,7 @@ import Typography from "@mui/joy/Typography";
 import SvgIcon from "@mui/joy/SvgIcon";
 import { Paper } from "@mui/material";
 import { Textarea } from "@mui/joy";
-
+import StorefrontIcon from '@mui/icons-material/Storefront';
 export default function Checkout() {
   return (
     <Card
@@ -27,19 +27,7 @@ export default function Checkout() {
           src="/static/images/avatar/1.jpg"
           sx={{ "--Avatar-size": "4rem" }}
         />
-        <Chip
-          size="sm"
-          variant="soft"
-          color="primary"
-          sx={{
-            mt: -1,
-            mb: 1,
-            border: "3px solid",
-            borderColor: "background.surface",
-          }}
-        >
-          PRO
-        </Chip>
+        <StorefrontIcon />
         <form
           onSubmit={(event) => {
             event.preventDefault();
@@ -48,9 +36,12 @@ export default function Checkout() {
           <Textarea
             placeholder="Try to submit with no text!"
             required
-            minRows={12}
+            minRows={22}
+            maxRows={23}
             sx={{ mb: 1 }}
+            overFlowY
           />
+
           <Textarea
             name="Plain"
             placeholder="Type in heffffxxxxxxxxxfffffffffffffre…"
