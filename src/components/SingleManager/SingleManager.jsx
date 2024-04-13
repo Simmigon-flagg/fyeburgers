@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./Manager.css";
+import "./SingleManager.css";
 
 import ManagerModal from '../Modal/ManagerModal';
 const Manager = ({ manager, updateManager, deleteManager }) => {

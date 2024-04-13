@@ -204,7 +204,9 @@
     {
       "id": "w-mN3fJg5FnyMxc0Qipe7",
       "name": "Simmigon",
-      "quantity": "1000"
+      "quantity": "1000",
+      "price": "9.99",
+      "category": "None"
     },
     {
       "id": "XYkTuyNG7LdgVtfwFqh4r",
