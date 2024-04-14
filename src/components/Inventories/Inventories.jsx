@@ -63,10 +63,7 @@ const Inventories = () => {
       ),
     },
   ];
-  const handleEditCellChange = React.useCallback(({ id, field, props }) => {
-    // Update your data or perform any other action based on the cell edit
-    console.log(`Row ID: ${id}, Field: ${field}, New Value: ${props.value}`);
-  }, []);
+
   return (
     <div className="container">
       {/* TODO: Move code to GridComponent.jsx */}

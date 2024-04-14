@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Modal.css";
 
-export default function InventoryModal({ content, header, inventory, createInventory, updateInventory, deleteInventory }) {
+export default function InventoryModal({ content, text, header, inventory, createInventory, updateInventory, deleteInventory }) {
     const [modal, setModal] = useState(false);
     const [newInventory, setNewInventory] = useState('');
 
@@ -43,7 +43,7 @@ export default function InventoryModal({ content, header, inventory, createInven
                 {header}
             </p>
 
-            {header === "Add New +" && modal && (
+            {text === "Add New +" && modal && (
                 <div className="modal">
                     <div onClick={toggleModal} className="overlay"></div>
                     <div className="modal-content">
