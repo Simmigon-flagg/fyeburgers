@@ -1,7 +1,7 @@
 {
   "employees": [
     {
-      "name": "Jane Smithy",
+      "name": "Jane Smith",
       "position": "Assistant Manager",
       "level": "23",
       "role": "Assists manager in daily tasks",
@@ -195,10 +195,10 @@
     },
     {
       "id": "b8c9",
-      "name": "5+65",
+      "name": "Koren Chicken",
       "quantity": "4984",
       "price": "10.99",
-      "category": "Create New"
+      "category": "Dinner"
     },
     {
       "id": "w-mN3fJg5FnyMxc0Qipe7",

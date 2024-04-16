@@ -1,5 +1,5 @@
 import pizza from "../../static/images/package-lock.jpeg"
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -12,9 +12,9 @@ import { ListItemText } from "@mui/material";
 import { SalesContext } from "../../context/SalesContext";
 import Paper from '@mui/material/Paper';
 
-export default function MenuCard({ inventory }) {
+export default function MenuCard({ inventory , order, setOrder }) {
 
-    const [count, setCount] = React.useState(0)
+    const [count, setCount] = useState(0)
     const { sales, createSale, updateSale, deleteSale } = useContext(SalesContext);
 
 
@@ -24,9 +24,9 @@ export default function MenuCard({ inventory }) {
         }
     }
 
-    const addItem = () => {
+    const addItem = (item) => {
 
-        setCount(count => count + 1)
+        setOrder([...order, item])
     }
 
     const inputAdd = (e) => {
@@ -45,38 +45,39 @@ export default function MenuCard({ inventory }) {
         <Paper elevation={10} >
 
             <Card >
-                <div >
+                
 
                     <CardHeader subheader={inventory.name} title={inventory.price} />
-                </div>
+                
                 <CardMedia
                     component="img"
                     height="100"
                     image={pizza}
                     alt={inventory.name}
+             
                 />
 
 
                 <CardActions style={{ display: "flex", justifyContent: "space-around" }}>
-                    <IconButton onClick={removeItem} aria-label="Remove Item">
-                        <RemoveIcon />
-                    </IconButton>
+                    
+                        <RemoveIcon onClick={removeItem} />
+               
 
                     <IconButton>
                         <ListItemText
-                            contentEditable
-                            shrink
+                                                        
                             onBlur={(e) => inputAdd(e)}
                             onKeyDown={handleKeyPress} // Add this line
                             primary={count}
+                            value={count}
                         >{count}</ListItemText>
 
                     </IconButton>
-                    <IconButton onClick={addItem} aria-label="Add Item">
-                        <AddIcon />
-                    </IconButton>
-                </CardActions>
-                <CardActions style={{ display: "flex", justifyContent: "space-between" }}>
+                    
+                        <AddIcon onClick={() => addItem(inventory)}/>
+                    
+                </CardActions >
+                <CardActions >
                     <IconButton onClick={() => setCount(0)} aria-label="add to favorites">
                         Remove
                     </IconButton>
