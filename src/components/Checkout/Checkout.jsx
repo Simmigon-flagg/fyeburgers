@@ -10,15 +10,19 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import Divider from '@mui/material/Divider';
 import { SalesContext } from "../../context/SalesContext";
 
-export default function Checkout({ order, setOrder  }) {
+export default function Checkout({ order, setOrder }) {
   const { sales, createSale, updateSale, deleteSale } = useContext(SalesContext);
   const removeOrder = (id) => {
-    setOrder(order.filter(item => item.id !== id ));
-    
- }
+    setOrder(order.filter(item => item.id !== id));
+
+  }
   return (
 
-    <Paper elevation={12} >
+    <Paper elevation={12} sx={{
+
+      position: "relative"
+
+    }} >
 
       <StorefrontIcon />
       Orders:
@@ -27,20 +31,29 @@ export default function Checkout({ order, setOrder  }) {
         sx={{
           width: 320,
           boxShadow: "lg",
-          overflowY: 'auto', maxHeight: '500px'
+          overflowY: 'auto', maxHeight: '500px',
+          position: "relative"
 
         }}
       >
-        <CardContent >
+        <CardContent sx={{ backgroundColor: "black" }}>
+          <Typography>
+            {order.map(item => (
+              <div key={item.id}>
+                {item.name} {item.price}
+                <Divider />
+                <Button
+                  onClick={() => removeOrder(item.id)}
+                  sx={{
 
-
-          <Typography >
-            {order.map(item => <div> <div key={item.id}>{item.name} {item.price} </div> <Button onClick={() => removeOrder(item.id)} style={{ backgroundColor: "red", color: "white" }}>Remove</Button><Divider /></div>)}
+                  }}
+                >
+                  Remove
+                </Button>
+              </div>
+            ))}
           </Typography>
-
-
-
-        </CardContent >
+        </CardContent>
 
       </Card>
       <Paper elevation={10}  >
@@ -48,9 +61,14 @@ export default function Checkout({ order, setOrder  }) {
         <Typography level="body-sm" sx={{ maxWidth: "24ch" }}>SubTotal: $0.00</Typography>
         <Typography level="title-lg">Total: $0.00</Typography>
 
-        <CardActions buttonFlex="1"  >
+        <CardActions buttonFlex="1" sx={{
+   display: "flex",
+   justifyItems: "flex-end"
+   
+
+ }} >
           <ButtonGroup >
-            <Button  style={{ backgroundColor: "blue", color: "white" }}>Hold</Button>
+            <Button style={{ backgroundColor: "blue", color: "white" }}>Hold</Button>
             <Button style={{ backgroundColor: "green", color: "white" }}>Pay</Button>
           </ButtonGroup>
         </CardActions>

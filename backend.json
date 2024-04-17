@@ -163,26 +163,8 @@
       "menu": "Breakfast",
       "price": 2.49,
       "quantity": 100,
-      "image": "https://example.com/french_fries.jpg",
+      "image": "http://localhost:3000/fries.webp",
       "id": "e389"
-    },
-    {
-      "name": "French Fries",
-      "category": "Side Dish",
-      "menu": "Breakfast",
-      "price": 2.49,
-      "quantity": 100,
-      "image": "https://example.com/french_fries.jpg",
-      "id": "e489"
-    },
-    {
-      "name": "French Fries",
-      "category": "Side Dish",
-      "menu": "Breakfast",
-      "price": 2.49,
-      "quantity": 100,
-      "image": "https://example.com/french_fries.jpg",
-      "id": "e789"
     },
     {
       "name": "Chicken Caesar Salad",
@@ -190,7 +172,7 @@
       "menu": "Lunch",
       "price": 4.99,
       "quantity": 30,
-      "image": "https://example.com/caesar_salad.jpg",
+      "image": "http://localhost:3000/chickencaesar.jpg",
       "id": "78d4"
     },
     {
@@ -198,6 +180,8 @@
       "name": "Koren Chicken",
       "quantity": "4984",
       "price": "10.99",
+      
+      "image": "http://localhost:3000/koreanchicken.jpg",
       "category": "Dinner"
     },
     {
@@ -205,6 +189,7 @@
       "name": "Simmigon",
       "quantity": "1000",
       "price": "9.99",
+      "image": "http://localhost:3000/burger.jpg",
       "category": "None"
     },
     {
@@ -213,7 +198,7 @@
       "category": "Burger",
       "price": "10.99",
       "quantity": "100",
-      "image": "No Image"
+      "image": "http://localhost:3000/burger.jpg"
     }
   ],
   "stores": [
